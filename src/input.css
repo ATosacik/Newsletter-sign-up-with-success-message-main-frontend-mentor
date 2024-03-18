@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.button-main {
+  @apply  p-4 hover:shadow-[0_.75rem_1rem_.3rem_hsl(var(--c-p-1-changed))] cursor-pointer bg-gradient-to-r from-[hsl(var(--c-n-1))] to-[hsl(var(--c-n-1))] w-full rounded-lg text-[hsl(var(--c-n-4))] font-bold hover:bg-gradient-to-r hover:from-[hsl(var(--c-p-2))] hover:to-[hsl(var(--c-p-1))];
+}

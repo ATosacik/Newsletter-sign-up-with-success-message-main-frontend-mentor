@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- Imports -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <!-- Title -->
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  <!-- Css -->
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/tailwind.css">
+  <!-- JavaScript -->
+  <script defer src="./js/main.js"></script>
+</head>
+
+<body class="lg:justify-center lg:items-center lg:bg-[hsl(var(--c-n-2))]">
+  <main>
+    <div class="grid-container">
+      <div id="sign-up-form-con"
+        class="flex flex-col-reverse lg:p-6 lg:rounded-[2rem] lg:flex-row lg:bg-[hsl(var(--c-n-4))] lg:items-center lg:pl-16 lg:justify-end lg:gap-8 max-w-[60rem] mx-auto">
+        <div class="space-y-6 px-6 py-12 text-[hsl(var(--c-n-1))]">
+          <h1 class="fs-900 font-bold">Stay updated!</h1>
+          <p class="">Join 60,000+ product managers receiving monthly updates on:</p>
+          <div class="space-y-4">
+            <div style="grid-template-columns: auto 1fr;" class="grid gap-4">
+              <img src="./assets/images/icon-list.svg" alt="icon-list">
+              <p class="">Product discovery and building what matters</p>
+            </div>
+            <div style="grid-template-columns: auto 1fr;" class="grid gap-4">
+              <img src="./assets/images/icon-list.svg" alt="icon-list">
+              <p class="">Measuring to ensure updates are a success</p>
+            </div>
+            <div style="grid-template-columns: auto 1fr;" class="grid gap-4">
+              <img src="./assets/images/icon-list.svg" alt="icon-list">
+              <p class="">And much more!</p>
+            </div>
+          </div>
+          <form class="space-y-6" id="main__form" action="">
+            <div class="flex flex-col w-full gap-2">
+              <div class="flex justify-between items-center">
+                <label class="fs-300 font-bold" for="email-input">Email address</label>
+                <div class="email-message fs-300 font-bold text-[hsl(var(--c-p-1))] hidden ">
+                  Valid email required</div>
+              </div>
+              <input required
+                class="w-full p-4 rounded-lg outline-none text-[hsl(var(--c-n-1))] border-[hsl(var(--c-n-3))] invalid:[&:not(:placeholder-shown):not(:focus)]:border-[hsl(var(--c-p-1))] invalid:[&:not(:placeholder-shown):not(:focus)]:bg-[hsl(var(--c-p-1-changed))] invalid:[&:not(:placeholder-shown):not(:focus)]:text-[hsl(var(--c-p-1))] border-[1px] border-solid"
+                placeholder="email@company.com" type="email" name="email-input" id="email-input">
+            </div>
+            <input class="button-main" id="submit-input" type="submit" value="Subscribe to monthly newsletter">
+          </form>
+        </div>
+        <div class="">
+          <img class="mx-auto flex lg:hidden" src="./assets/images/illustration-sign-up-mobile.svg"
+            alt="illustration-sign-up">
+          <img class="ml-auto hidden lg:flex" src="./assets/images/illustration-sign-up-desktop.svg"
+            alt="illustration-sign-up">
+        </div>
+      </div>
+    </div>
+    <div class="grid-container">
+      <div id="acknowledgement-con"
+        class="hidden flex-col lg:p-12 mx-auto max-w-[30rem] lg:bg-[hsl(var(--c-n-4))] gap-8 lg:rounded-[2rem]">
+        <div class="space-y-6 self-center pt-40 lg:pt-0 text-[hsl(var(--c-n-1))]">
+          <img class="mb-10" src="./assets/images/icon-success.svg" alt="icon-success">
+          <h1 class="fs-900 font-bold">Thanks for subscribing!</h1>
+          <p class="">A confirmation email has been sent to <span id="email-span" class="font-bold"
+              style="word-break: break-all;"></span>
+            Please open it and click the button inside to confirm your subscription.</p>
+        </div>
+        <button id="dismiss-button" class=" button-main mt-60 lg:mt-0">Dismiss message</button>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
